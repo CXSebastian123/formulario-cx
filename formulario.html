@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario Datos Personales</title>
+  <style>
+    body { background:#f0f4f8; font-family:Arial,sans-serif; padding:2rem }
+    form { background:#fff; padding:2rem; border-radius:8px; max-width:700px; margin:auto; box-shadow:0 0 10px rgba(0,0,0,0.1) }
+    h2 { text-align:center; color:#333; margin-bottom:1.5rem }
+    .fila { display:flex; gap:1rem; flex-wrap:wrap }
+    .campo { flex:1; min-width:200px; margin-bottom:1rem }
+    label { display:block; margin-bottom:0.4rem; font-weight:bold; color:#444 }
+    input, select, textarea { width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:5px; font-size:1rem }
+    button { background:#007BFF; color:#fff; padding:0.75rem; font-size:1rem; border:none; border-radius:5px; cursor:pointer; width:100%; margin-top:1.5rem }
+    button:hover { background:#0056b3 }
+  </style>
+</head>
+<body>
+<form method="POST" action="TU_URL_DEL_SCRIPT">
+  <h2>I. DATOS PERSONALES</h2>
+
+  <div class="fila">
+    <div class="campo"><label>Apellido Paterno</label><input name="apellido_paterno" required /></div>
+    <div class="campo"><label>Apellido Materno</label><input name="apellido_materno" required /></div>
+  </div>
+  <div class="campo"><label>Nombres</label><input name="nombres" required /></div>
+  
+  <div class="fila">
+    <div class="campo">
+      <label>Tipo de Documento</label>
+      <select name="tipo_documento" required>
+        <option value="">Seleccione tipo</option>
+        <option value="dni">DNI</option>
+        <option value="ce">Carnet de Extranjería (C.E.)</option>
+        <option value="pasaporte">Pasaporte</option>
+      </select>
+    </div>
+    <div class="campo"><label>Número de Documento</label><input name="numero_documento" required /></div>
+  </div>
+
+  <div class="campo"><label>Nacionalidad</label><input name="nacionalidad" /></div>
+  <div class="campo"><label>Domicilio Actual</label><input name="domicilio" /></div>
+
+  <div class="fila">
+    <div class="campo"><label>Departamento</label><input name="departamento" /></div>
+    <div class="campo"><label>Provincia</label><input name="provincia" /></div>
+    <div class="campo"><label>Distrito</label><input name="distrito" /></div>
+  </div>
+
+  <div class="campo"><label>Lugar de Nacimiento</label><input name="lugar_nacimiento" /></div>
+  
+  <div class="campo"><label>Estado Civil</label>
+    <select name="estado_civil" required>
+      <option value="">Seleccione estado civil</option>
+      <option value="soltero">Soltero/a</option>
+      <option value="casado">Casado/a</option>
+      <option value="conviviente">Conviviente</option>
+      <option value="divorciado">Divorciado/a</option>
+      <option value="viudo">Viudo/a</option>
+    </select>
+  </div>
+
+  <div class="fila">
+    <div class="campo">
+      <label>Grado de Instrucción</label>
+      <select name="grado_instruccion">
+        <option value="">Seleccione grado de instrucción</option>
+        <option value="ninguno">Ninguno</option>
+        <option value="primaria">Primaria</option>
+        <option value="secundaria">Secundaria</option>
+        <option value="tecnico">Técnico</option>
+        <option value="universitario">Universitario</option>
+        <option value="postgrado">Postgrado</option>
+      </select>
+    </div>
+    <div class="campo"><label>Fecha de Nacimiento</label><input type="date" name="fecha_nacimiento" /></div>
+    <div class="campo"><label>Edad</label><input type="number" name="edad" /></div>
+  </div>
+
+  <div class="campo"><label>Sexo</label>
+    <select name="sexo" required>
+      <option value="">Seleccione</option>
+      <option>Masculino</option>
+      <option>Femenino</option>
+    </select>
+  </div>
+
+  <div class="fila">
+    <div class="campo"><label>Ocupación</label><input name="ocupacion" /></div>
+    <div class="campo"><label>Teléfono</label><input type="tel" name="telefono" /></div>
+    <div class="campo"><label>Celular</label><input type="tel" name="celular" /></div>
+  </div>
+
+  <div class="campo"><label>Correo Electrónico</label><input type="email" name="correo" /></div>
+  <div class="campo"><label>Lugar de trabajo</label><input name="lugar_trabajo" /></div>
+
+  <div class="fila">
+    <div class="campo"><label>Viajes</label><input name="viajes" /></div>
+    <div class="campo"><label>Permanencia</label><input name="permanencia" /></div>
+    <div class="campo"><label>Fecha</label><input type="date" name="fecha" /></div>
+  </div>
+
+  <div class="campo"><label>Otros Servicios</label><textarea name="otros" rows="3"></textarea></div>
+
+  <button type="submit">Enviar Datos</button>
+</form>
+</body>
+</html>
